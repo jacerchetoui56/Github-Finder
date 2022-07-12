@@ -46,25 +46,26 @@ export default function Main() {
                     }
                 }}
             >
-                <div className="flex dark:bg-primary-100 bg-slate-200 shadow-lg shadow-slate-300 dark:shadow-transparent justify-between items-center p-2 rounded-2xl">
-                    <FiSearch className="text-blue-500 text-2xl mx-2 shrink-0" />
+                <div className="flex dark:bg-primary-100 bg-slate-200 shadow-lg shadow-slate-300 dark:shadow-transparent
+                 justify-center items-center p-2 rounded-2xl">
+                    <FiSearch className="text-blue-500 text-lg lg:text-2xl mx-2 shrink-0" />
                     <input
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="dark:text-slate-200 text-gray-600 bg-transparent border-none text-lg p-2 font-medium 
+                        className="dark:text-slate-200 text-gray-600 bg-transparent border-none text-base lg:text-lg p-2 font-medium 
             tracking-wider font-mono flex-1 flex-shrink-[2] focus:outline-none overflow-ellipsis"
                         type="text"
                         placeholder="Search Github username"
                     />
                     <button
-                        className="rounded-2xl font-medium px-5 py-3 text-base bg-blue-600
-            text-white tracking-wide text-center"
+                        className="rounded-2xl font-medium px-5 py-3 text-sm md:text-base bg-blue-600
+            text-white tracking-wider text-center mr-2 md:mr-0"
                     >
                         Search
                     </button>
                 </div>
             </form>
-            <div className="mt-4 dark:bg-primary-100 bg-slate-200 p-6 md:p-8 rounded-2xl shadow-lg shadow-slate-300 dark:shadow-transparent">
+            <div className="mt-4 dark:bg-primary-100 bg-slate-200 p-4 md:p-8 rounded-2xl shadow-lg shadow-slate-300 dark:shadow-transparent">
                 <div className="flex justify-start">
                     <img
                         className="h-24 w-24 rounded-full"
