@@ -67,18 +67,22 @@ export default function Main() {
             </form>
             <div className="mt-4 dark:bg-primary-100 bg-slate-200 p-4 md:p-8 rounded-2xl shadow-lg shadow-slate-300 dark:shadow-transparent">
                 <div className="flex justify-start">
-                    <img
-                        className="h-24 w-24 rounded-full"
-                        src={data ? data.avatar_url : "images/avatar.gif"}
-                        alt=""
-                    />
+                    <a href={data?.html_url}>
+                        <img
+                            className="h-24 w-24 rounded-full"
+                            src={data ? data.avatar_url : "images/avatar.gif"}
+                            alt=""
+                        />
+                    </a>
                     <div className="ml-8">
-                        <h2 className="text-xl dark:text-slate-100 text-black tracking-widest font-mono mb-[0.1rem]">
-                            {data ? data.name : "Jacer Chetoui"}
-                        </h2>
-                        <h4 className="text-blue-600 text-base font-mono mb-3">
-                            @{data ? data.login : "jacerchetoui56"}
-                        </h4>
+                        <a href={data?.html_url} target={'blank'}>
+                            <h2 className="text-xl dark:text-slate-100 text-black tracking-widest font-mono mb-[0.1rem]">
+                                {data ? data.name : "Jacer Chetoui"}
+                            </h2>
+                            <h4 className="text-blue-600 text-base font-mono mb-3">
+                                @{data ? data.login : "jacerchetoui56"}
+                            </h4>
+                        </a>
                         <h3 className="text-base dark:text-slate-300 text-gray-600 tracking-wide font-mono">
                             Joined {data ? data.created_at.split("T")[0] : "25 Jan 2011"}
                         </h3>
