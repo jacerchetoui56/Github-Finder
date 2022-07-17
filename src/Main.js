@@ -119,7 +119,7 @@ export default function Main() {
                         </h6>
                     </div>
                 </div>
-                <div className="mt-3 md:grid md:grid-cols-2">
+                <div className="mt-3  md:columns-2">
 
                     <Info
                         exist={data && (data.location !== null) ? true : false}
@@ -143,7 +143,7 @@ export default function Main() {
                     <Info
                         exist={data && (data.company !== null) ? true : false}
                         icon={MdApartment}
-                        info={'@' + data?.company}
+                        info={data?.company}
                     />
 
                 </div>
