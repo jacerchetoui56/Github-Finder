@@ -39,6 +39,7 @@ export default function Main() {
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
+                    if (e.target.value === '') return
                     try {
                         fetchData(search)
                     } catch (error) {
@@ -50,6 +51,7 @@ export default function Main() {
                  justify-center items-center p-2 rounded-2xl">
                     <FiSearch className="text-blue-500 text-lg lg:text-2xl mx-2 shrink-0" />
                     <input
+                        required
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         className="dark:text-slate-200 text-gray-600 bg-transparent border-none text-base lg:text-lg p-2 font-medium 
